@@ -1,0 +1,54 @@
+<div id="layoutSidenav_content">
+  <main>
+    <div class="container-fluid">
+      <h1 class="mt-4">Users</h1>
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="index.html">Users</a></li>
+        <li class="breadcrumb-item active">Lists</li>
+      </ol>
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Fullname</th>
+                  <th>Email</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @users.each_with_index do |user, idx| %>
+                  <tr>
+                    <td><%= idx + 1 %>.</td>
+                    <td><%= user.fullname %></td>
+                    <td><%= user.email %></td>
+                    <th>
+                      <%= link_to 'Edit', edit_admin_user_path(user), class: 'btn btn-warning'%>
+                      <% unless user.posts %>
+                        <%= link_to 'Delete', admin_user_path(user), method: :delete, class: 'btn btn-danger'%>
+                      <% end %>
+                    </th>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between small">
+        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          &middot;
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>AssignmentVenuerific</title>
+    <title>Admin AssignmentVenuerific</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,9 +10,11 @@
   </head>
 
   <body>
-    <%= render 'shared/header'%>
-    <%= yield %>
-    <%= render 'shared/footer'%>
+    <%= render 'shared/header_admin'%>
+    <div id="layoutSidenav">
+      <%= render 'shared/nav_admin'%>
+      <%= yield %>
+    </div>
   </body>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>
