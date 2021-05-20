@@ -1,0 +1,39 @@
+<header class="masthead" style="background-image: url('assets/home-bg.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+              <div class="site-heading">
+                 <div class="post-heading">
+                    <h1><%= @post.title %></h1>
+                    <h2 class="subheading"><%= truncate(@post.content, :length => 50, :omission => '...')%></h2>
+                    <span class="meta">
+                        Posted by
+                        <a href="#!"><%= @post.user.fullname rescue '' %></a>
+                        on <%= @post.created_at.strftime('%b %d, %Y')  %>
+                    </span>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+ <header class="masthead" style="background-image: url('assets/img/post-bg.jpg')">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                       
+                    </div>
+                </div>
+            </div>
+        </header>
+<article>
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+              <%= @post.content %>
+          </div>
+      </div>
+  </div>
+</article>
