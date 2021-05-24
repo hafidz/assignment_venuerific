@@ -1,6 +1,7 @@
 class Admin::PostsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_post, only: [:show, :edit, :update, :destroy, :filter_provider]
+  load_and_authorize_resource
   layout 'admin'
 
   def index

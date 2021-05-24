@@ -1,0 +1,39 @@
+<% if flash[:success] || !flash[:success].blank? %>
+  <div class="alert alert-dismissable alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>
+      <%= 
+        if flash[:success].count > 0
+          flash[:success].join("<br/>").html_safe
+        end rescue flash[:success]
+      %>
+    </strong>
+    <br />
+  </div>
+<% elsif flash[:notice] || !flash[:notice].blank? %>
+  <div class="alert alert-dismissable alert-info">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>
+      <%= 
+        if flash[:notice].count > 0
+          flash[:notice].join("<br/>").html_safe
+        end rescue flash[:notice]
+      %>
+    </strong>
+    <br />
+  </div>
+<% elsif flash[:error] || !flash[:error].blank? %>
+  <div class="alert alert-dismissable alert-danger">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>
+      <%= 
+        if flash[:error].count > 0
+          flash[:error].join("<br/>").html_safe
+        end rescue flash[:error]
+      %>
+    </strong>
+    <br />
+  </div>
+<% end %>
+
+<%= flash[:error] %>

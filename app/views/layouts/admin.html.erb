@@ -13,7 +13,11 @@
     <%= render 'shared/header_admin'%>
     <div id="layoutSidenav">
       <%= render 'shared/nav_admin'%>
-      <%= yield %>
+      <div id="layoutSidenav_content">
+        <%= render 'shared/flash'%>
+        <%= yield %>
+        <%= render 'shared/footer_admin'%>
+      </div>
     </div>
   </body>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>

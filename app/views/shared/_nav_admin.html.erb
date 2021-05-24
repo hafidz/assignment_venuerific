@@ -11,11 +11,13 @@
           Dashboards
         <% end %>
         <div class="sb-sidenav-menu-heading">Menu</div>
-        <%= link_to admin_posts_path, class: "nav-link" do  %>
-          <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-          Posts
+        <% if can? :index, Post %>
+          <%= link_to admin_posts_path, class: "nav-link" do  %>
+            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+            Posts
+          <% end %>
         <% end %>
-        <% if current_user.is_admin? %>
+        <% if can? :read, User %>
           <%= link_to admin_users_path, class: "nav-link" do  %>
             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
             Users
