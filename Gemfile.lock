@@ -86,10 +86,7 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
-<<<<<<< HEAD
     diff-lcs (1.4.4)
-=======
->>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
     erubi (1.10.0)
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
@@ -114,12 +111,10 @@ GEM
     marcel (1.0.1)
     method_source (1.0.0)
     mini_mime (1.0.3)
-    mini_portile2 (2.5.1)
     minitest (5.14.4)
     msgpack (1.4.2)
     nio4r (2.5.7)
-    nokogiri (1.11.5)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.11.5-x86_64-darwin)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     pg (1.2.3)
@@ -168,7 +163,6 @@ GEM
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
-<<<<<<< HEAD
     rspec-core (3.10.1)
       rspec-support (~> 3.10.0)
     rspec-expectations (3.10.1)
@@ -186,8 +180,6 @@ GEM
       rspec-mocks (~> 3.9)
       rspec-support (~> 3.9)
     rspec-support (3.10.2)
-=======
->>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
     rubyzip (2.3.0)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -252,10 +244,7 @@ DEPENDENCIES
   cancancan (~> 1.10)
   capybara (>= 3.26)
   devise
-<<<<<<< HEAD
   factory_bot_rails (= 6.1.0)
-=======
->>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
