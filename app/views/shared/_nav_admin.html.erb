@@ -11,6 +11,7 @@
           Dashboards
         <% end %>
         <div class="sb-sidenav-menu-heading">Menu</div>
+<<<<<<< HEAD
         <% if can? :index, Post %>
           <%= link_to admin_posts_path, class: "nav-link" do  %>
             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
@@ -18,6 +19,13 @@
           <% end %>
         <% end %>
         <% if can? :read, User %>
+=======
+        <%= link_to admin_posts_path, class: "nav-link" do  %>
+          <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
+          Posts
+        <% end %>
+        <% if current_user.is_admin? %>
+>>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
           <%= link_to admin_users_path, class: "nav-link" do  %>
             <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
             Users

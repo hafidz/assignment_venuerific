@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <main>
   <div class="container-fluid">
     <h1 class="mt-4">Posts</h1>
@@ -48,3 +49,63 @@
     </div>
   </div>
 </main>
+=======
+<div id="layoutSidenav_content">
+  <main>
+    <div class="container-fluid">
+      <h1 class="mt-4">Posts</h1>
+      <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="index.html">Posts</a></li>
+        <li class="breadcrumb-item active">Lists</li>
+      </ol>
+      <div class="card mb-4">
+        <%= link_to 'New Post', new_admin_post_path, class: 'btn btn-primary'%>
+      </div>
+      <div class="card mb-4">
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Title</th>
+                  <th>Content</th>
+                  <th>User</th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @posts.each_with_index do |post, idx| %>
+                  <tr>
+                    <td><%= idx + 1 %>.</td>
+                    <td><%= post.title %></td>
+                    <td><%= truncate(post.content, :length => 200, :omission => '...') %></td>
+                    <td><%= post.user.fullname ? '' : post.user.email %></td>
+                    <th>
+                      <%= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-warning'%>
+                      <%= link_to 'Delete', admin_post_path(post), method: :delete, class: 'btn btn-danger'%>
+                    </th>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="py-4 bg-light mt-auto">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center justify-content-between small">
+        <div class="text-muted">Copyright &copy; Your Website 2021</div>
+        <div>
+          <a href="#">Privacy Policy</a>
+          &middot;
+          <a href="#">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+>>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61

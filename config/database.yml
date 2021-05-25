@@ -7,6 +7,7 @@ development:
   password:
   host: localhost
 
+<<<<<<< HEAD
 test:
   adapter: postgresql
   encoding: unicode
@@ -16,6 +17,8 @@ test:
   password:
   host: localhost
 
+=======
+>>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
 
 production:
   url: <%= ENV['DATABASE_URL']%>
