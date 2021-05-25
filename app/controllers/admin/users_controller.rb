@@ -1,10 +1,7 @@
 class Admin::UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user, only: [:show, :edit, :update, :destroy, :filter_provider]
-<<<<<<< HEAD
   load_and_authorize_resource
-=======
->>>>>>> ab0129e5817eced1dfd0a0051cd1c244399a0a61
   layout 'admin'
 
   def index
